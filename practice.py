@@ -8,34 +8,34 @@ print("Конвертация числовой переменной в стро�
 int_variable = str(int_variable)
 print(type(int_variable), end='\n\n')
 
-List_variable = ['django', 'flask', 'pandas', 'numpy', 'selenium']
+list_variable = ['django', 'flask', 'pandas', 'numpy', 'selenium']
 
 print("Добавляем элемент в конец списка:")
-List_variable.append('tensorflow')
-print(List_variable, end='\n\n')
+list_variable.append('tensorflow')
+print(list_variable, end='\n\n')
 
 print("Добавляем элемент в нужную позицию в списке:")
-List_variable.insert(3, 'matplotlib')
-print(List_variable, end='\n\n')
+list_variable.insert(3, 'matplotlib')
+print(list_variable, end='\n\n')
 
 print("Удаляем первый элемент:")
-List_variable.remove('django')
-print(List_variable, end='\n\n')
+list_variable.remove('django')
+print(list_variable, end='\n\n')
 
 print("Удаляем элемент списка по индексу:")
-List_variable.pop(0)
-print(List_variable, end='\n\n')
+list_variable.pop(0)
+print(list_variable, end='\n\n')
 
 print("Разворачиваем список:")
-List_variable.reverse()
-print(List_variable, end='\n\n')
+list_variable.reverse()
+print(list_variable, end='\n\n')
 
 print("Подсчитуем количество элементов pandas в списке:")
-print(List_variable.count('pandas'), end='\n\n')
+print(list_variable.count('pandas'), end='\n\n')
 
 print("Создаём копию списка:")
-List_variable2 = List_variable.copy()
-print(List_variable2, end='\n\n')
+list_variable2 = list_variable.copy()
+print(list_variable2, end='\n\n')
 
 print("Сортируем первый список используя алгоритм сортировки выбором:")
 def selection_sort(nums):
@@ -46,12 +46,12 @@ def selection_sort(nums):
                 lowest_value_index = j
         nums[i], nums[lowest_value_index] = nums[lowest_value_index], nums[i]
 
-selection_sort(List_variable)
-print(List_variable, end='\n\n')
+selection_sort(list_variable)
+print(list_variable, end='\n\n')
 
 print("Сортируем второй список стандартным методом:")
-List_variable2.sort()
-print(List_variable2, end='\n\n')
+list_variable2.sort()
+print(list_variable2, end='\n\n')
 
 print("Сортируем строку по алфавиту:")
 print(sorted("This is a test string for Internship Onix for python".split(),
