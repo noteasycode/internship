@@ -1,7 +1,7 @@
-
 def by_value(item):
     """Function from the previous task."""
     return item[1]
+
 
 def selection_sort(nums):
     """Function from the previous task."""
@@ -12,8 +12,10 @@ def selection_sort(nums):
                 lowest_value_index = j
         nums[i], nums[lowest_value_index] = nums[lowest_value_index], nums[i]
 
+
 #   Creating global variable
 int_variable = 4
+
 
 def my_func():
     """Put the task from previous lesson in this function"""
@@ -65,7 +67,7 @@ def my_func():
 
     print("Сортируем строку по алфавиту:")
     print(sorted("This is a test string for Internship Onix for python".split(),
-             key=str.lower
+                 key=str.lower
                  ), end='\n\n'
           )
 
@@ -108,15 +110,19 @@ def my_func():
                              key=by_value):
         print(key, "->", value)
 
+
 def multiply_global_num(num):
     global int_variable
     new_list = []
     new_list.append(int(int_variable) * int(num))
     return new_list, len(new_list)
 
+
 def args_kwargs(*args, **kwargs):
     print(args)
-    print(kwargs)
+    for key, value in kwargs.items():
+        print(key, "->", value)
+
 
 def is_divisible_by(num, divisor):
     if (num % divisor) == 0:
@@ -124,11 +130,13 @@ def is_divisible_by(num, divisor):
     else:
         print(f"The number {num} is not divisible by number {divisor}.")
 
+
 def fibonacci(num):
     if num < 2:
         return num
     else:
-        return (fibonacci(num-1) + fibonacci(num-2))
+        return (fibonacci(num - 1) + fibonacci(num - 2))
+
 
 if __name__ == "__main__":
     my_func()
