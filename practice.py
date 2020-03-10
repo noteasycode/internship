@@ -126,9 +126,9 @@ def args_kwargs(*args, **kwargs):
 
 def is_divisible_by(num, divisor):
     if (num % divisor) == 0:
-        print(f"The number {num} is divisible by number {divisor}.")
+        print(f"The number {num} is divisible by number {divisor} without remainder.")
     else:
-        print(f"The number {num} is not divisible by number {divisor}.")
+        print(f"The number {num} is not divisible by number {divisor} without remainder.")
 
 
 def fibonacci(num):
