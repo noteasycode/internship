@@ -6,19 +6,26 @@ class First:
         self.number = number
         self.divisor = divisor
 
-    def __del__(self):
-        print(f"The number {self.number}, was delete")
-
     def is_divisible_by(self):
         if (self.number % self.divisor) == 0:
             print(f"The number {self.number} is divisible by number {self.divisor} without remainder.")
         else:
             print(f"The number {self.number} is not divisible by number {self.divisor} without remainder.")
 
+    @staticmethod
+    def stat_method(num1, num2):
+        multiply = lambda a, b : a * b
+        print(f"The result of multiply is {multiply(num1, num2)}")
+
+    def __del__(self):
+        print(f"The number {self.number}, was delete")
+        print(f"The number {self.divisor}, was delete")
+
 
 div_number = First(10, 3)
+div_number.is_divisible_by()
 
-print(div_number.is_divisible_by())
+First.stat_method(2, 3)
 """
 # Use map to print the square of each numbers rounded
 # to two decimal places
