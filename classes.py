@@ -14,7 +14,7 @@ class First:
 
     @staticmethod
     def stat_method(num1, num2):
-        multiply = lambda a, b : a * b
+        multiply = lambda a, b: a * b
         print(f"The result of multiply is {multiply(num1, num2)}")
 
     def __del__(self):
@@ -24,8 +24,24 @@ class First:
 
 div_number = First(10, 3)
 div_number.is_divisible_by()
-
 First.stat_method(2, 3)
+
+
+class Second(First):
+    def __init__(self, number, divisor, color, string):
+        super().__init__(number, divisor)
+        self.string = string
+        self.__color = color
+
+    def __checker(self):
+        return type(str()) == type(self.string)
+
+
+print("Second class:")
+second_var = Second(10, 15, 5, 6)
+print(f"The protected variable is: {second_var._Second__color}")
+
+
 """
 # Use map to print the square of each numbers rounded
 # to two decimal places
