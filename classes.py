@@ -38,13 +38,12 @@ class Third(First):
 
     @staticmethod
     def stat_method(num1, num2):
-        print(f"The Greatest Common Divisor of {num1} and {num2} is {math.gcd(num1, num2)}")
+        print(f"The greatest common divisor of {num1} and {num2} is {math.gcd(num1, num2)}")
         print(f"The lowest common multiple of {num1} and {num2} is {(num1 * num2) // math.gcd(num1, num2)}")
 
 
-
 if __name__ == "__main__":
-    print("The result of operations in Third class:")
+    print("The result of operations in First class:")
     first_var = First(10)
     first_var.is_divisible_by(3)
     First.stat_method(2, 3)
@@ -57,19 +56,22 @@ if __name__ == "__main__":
     third_var = Third(11)
     Third.stat_method(85, 45)
 
-"""
-# Use map to print the square of each numbers rounded
-# to two decimal places
-my_floats = [4.35, 6.09, 3.25, 9.77, 2.16, 8.88, 4.59]
+    # Use map to print the square of each numbers rounded
+    # to two decimal places
+    my_floats = [4.35, 6.09, 3.25, 9.77, 2.16, 8.88, 4.59]
 
-# Use filter to print only the names that are less than
-# or equal to seven letters
-my_names = ["olumide", "akinremi", "josiah", "temidayo", "omoseun"]
+    # Use filter to print only the names that are less than
+    # or equal to seven letters
+    my_names = ["olumide", "akinremi", "josiah", "temidayo", "omoseun"]
 
-# Use reduce to print the product of these numbers
-my_numbers = [4, 6, 9, 23, 5]
+    # Use reduce to print the product of these numbers
+    my_numbers = [4, 6, 9, 23, 5]
 
-# Fix all three respectively.
-map_result = list(map(lambda x: x, my_floats))
-filter_result = list(filter(lambda name: name, my_names, my_names))
-"""
+    # Fix all three respectively.
+    map_result = list(map(lambda x: round(x**2, 2), my_floats))
+    filter_result = list(filter(lambda name: len(name) <= 7, my_names))
+    reduce_result = reduce((lambda num1, num2: num1 * num2), my_numbers)
+
+    print(map_result)
+    print(filter_result)
+    print(reduce_result)
