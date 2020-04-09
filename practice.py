@@ -150,7 +150,7 @@ if __name__ == "__main__":
     is_divisible_by(12, 4)
     print(fibonacci(13))
 
-    print("Task 5")
+    print("\nTask 5")
     now = datetime.today()
     tomorrow = now + timedelta(days=1)
     str_date = datetime.strptime("2020-02-03 09:18:36.000", "%Y-%m-%d %X.%f")
