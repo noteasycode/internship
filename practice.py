@@ -1,3 +1,8 @@
+import string
+from random import randrange, choice, sample, randint
+from datetime import datetime, timedelta
+
+
 def by_value(item):
     """Function from the previous task."""
     return item[1]
@@ -144,3 +149,25 @@ if __name__ == "__main__":
     args_kwargs(1, 2, my_name="Denis", my_country='Ukraine')
     is_divisible_by(12, 4)
     print(fibonacci(13))
+
+    print("Task 5")
+    now = datetime.today()
+    tomorrow = now + timedelta(days=1)
+    str_date = datetime.strptime("2020-02-03 09:18:36.000", "%Y-%m-%d %X.%f")
+    print(f"Today: {now.strftime('%d-%m-%Y %H:%M')}\nTomorrow: {tomorrow.strftime('%d-%m-%Y %H:%M')}\n"
+          f"Converted string to datetime: {str_date}\n"
+          f"Day: {str_date.strftime('%d')}\nMonth: {str_date.strftime('%m')}\n"
+          f"Year: {str_date.strftime('%Y')}\nHour: {str_date.strftime('%H')}\n"
+          f"Seconds: {str_date.strftime('%S')}")
+
+    num = [randrange(100, 999, 5) for _ in range(3)]
+    print(f"The numbers {', '.join(str(x) for x in num)} are divisible by 5")
+    print(f"Random symbols: {''.join(choice(string.ascii_letters + string.digits) for i in range(10))}")
+    tickets = [randrange(1000000000, 10000000000) for _ in range(100)]
+    print(f"The lottery ticket that won are: {', '.join(str(x) for x in sample(tickets, 2))}")
+    try:
+        x = 1 / 0
+    except:
+        print("Something went wrong")
+    finally:
+        print("The 'try except' is finished")
